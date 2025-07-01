@@ -1,0 +1,29 @@
+/* ~~~ cv.css */
+
+h1, .tagline {
+  text-align: center;
+}
+
+.horizontal-layout {
+  display: flex;
+   /* TODO: Uncomment below when Media with queries enabled, when going back from Mobile to (Tablet | Desktop) */
+  /* flex-direction row;  */
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-list-decoration {
+  list-style: none;
+}
+
+.label {
+  font-weight: bold;
+}
+
+address {
+  font-style: normal;
+}
