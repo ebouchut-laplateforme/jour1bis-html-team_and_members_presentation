@@ -1,0 +1,78 @@
+/* cv.css */
+
+/* ~~~~~ Color Theme */
+
+:root { /* :root <==> targets the html tag */
+  --cv-color-background: #4a6a89;
+  --cv-color-text: #eeeeee;
+}
+
+
+/*
+ *  The CV is laid out using Flexbox layout:
+ *  All flex containers use the default `flex-direction: row`
+ * (left to right here in 🇫🇷 (dir="ltr"))
+ *
+ *  <section> (flex item)
+ *        \          <h1> (block)
+ *         \         /   <blockquote> (block)
+ * *--------\-------/---/---------------------------+
+ * | +-------\-----/---/----+  +-----------------+  |--> <header>(flex container → ⏎)
+ * | | +----------/---/--+  |  | Contact Details:|  |
+ * | | |      Name   /   |  |  |   - Phone       |  |
+ * | | +------------/----+  |  |   - Email       |--|--> <address>(flex item)
+ * | | +-----------/-----+  |  |   - LinkedIn    |  |
+ * | | |    Job Title    |  |  |   - Blog        |  |
+ * | | + ----------------±  |  |                 |  |
+ * | +----------------------±  +-----------------+  |
+ * +------------------------------------------------±
+ *
+ * +------------------------------------------------±
+ * | +------------+ +------------+ +------------+   |--> <main>(flex container → ⏎)
+ * | |Experiences | |Competences | | Formations |   |
+ * | +------------+ +------------+ +------\-----±   |
+ * +---------------------------------------\--------+
+ *                                          \----------> <section> (flex item)
+ */
+
+/*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Header - Flex Container
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.cv-header-container {
+  display:        flex;
+  flex-wrap:      wrap;
+}
+
+/* ~~~~~ Header - Flex Items - "Name and Job Title" are aligned vertically */
+
+.cv-header-item-name {
+  flex-grow:      6;
+}
+
+.cv-header-item-contact {
+  flex-grow:      4;
+}
+
+.cv-job-title {
+  text-align: center;
+}
+
+/* ~~~~~ TODO: */
+
+.field-label {
+  font-weight: bold;
+}
+
+.company-description {
+  font-style: italic;
+}
+
+.company-details > li {
+  list-style-type: none; /* Remove bullet points */
+}
+
+.diploma {
+  /* TODO: Add a diploma visual */
+}
