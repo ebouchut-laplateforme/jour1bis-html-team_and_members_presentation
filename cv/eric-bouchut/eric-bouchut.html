@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="css/cv.css">
+
+  <!--
+    With `defer="true"` this JS script:
+      - will load **during** the HTML parsing (in parallel),
+      - will **not** block the HTML parsing,
+      - will be executed **after** HTML parsing, i.e., once the DOM is built.
+    -->
+  <script src="js/cv.js" type="text/javascript" defer="true"></script>
 
   <title>CV Eric Bouchut</title>
 </head>
@@ -18,12 +27,13 @@
         Analyste Cybersécurité
       </blockquote>
     </section>
+
     <address class="cv-header-item-contact" aria-label="Comment me contacter ?">
       <ul class="no-list-decoration">
         <li><span class="label">Email : </span><a href="mailto:EricBouchut@gmail.com">EricBouchut@gmail.com</a></li>
         <li><span class="label">Linkedin : </span>
-        <li><a href="https://linkedin.com/in/ebouchut">https://linkedin.com/in/ebouchut</a></li>
-        <li><span class="label">Blog : </span><a href="https://EricBouchut.com">Blog</a></li>
+        <li><a href="https://linkedin.com/in/ebouchut" class="open-new-window">https://linkedin.com/in/ebouchut</a></li>
+        <li><span class="label">Blog : </span><a href="https://EricBouchut.com" class="open-new-window">Blog</a></li>
       </ul>
     </address>
   </header>
@@ -47,13 +57,14 @@
           J'aime expliquer, transmettre mes connaissances et me tenir au courant des évolutions technologiques.
         </p>
         <p>
-          En <time datetime="2023">2023</time> J'ai rejoint le projet open-source <a href="</datetime">Loop</a>,
+          En <time datetime="2023">2023</time> J'ai rejoint le projet open-source 
+          <a href="https://loopdocs.org/" class="open-new-window">Loop</a>,
           où je travaille avec une équipe virtuelle mondiale pour améliorer la documentation technique
           et configurer les outils utilisés pour sa création.
         </p>
         <p>
           En <time datetime="2021">2021</time>, en tant que développeur Solidity pour le projet open-source
-          <a href="https://github.com/bet-no-loss/bet-no-loss#readme">Bet-no-loss</a> (5 personnes),
+          <a href="https://github.com/bet-no-loss/bet-no-loss#readme" class="open-new-window">Bet-no-loss</a> (5 personnes),
           j'ai co-écrit et documenté un smart-contract pour la Blockchain Ethereum pour miser sur un pari sportif sans perdre sa mise.
         </p>
         <p>
@@ -66,8 +77,8 @@
           J'ai rédigé  plusieurs articles de blog sur le système de gestion de versions
           <abbr title="Système de gestion de versions distribué permettant la collaboration, le suivi des modifications et la synchronisation du code.">Git</abbr> :
           <ul>
-            <li><a href="https://ericbouchut.com/2021/07/22/git-stash-internals/">Git Stash Internals</a></li>
-            <li><a href="https://github.com/ebouchut/learn-git/wiki/Git-Flow">Git Flow</a></li>
+            <li><a href="https://www.ericbouchut.com/blog/2021/07/22/git-stash-internals/" class="open-new-window">Git Stash Internals</a></li>
+            <li><a href="https://github.com/ebouchut/learn-git/wiki/Git-Flow" class="open-new-window">Git Flow</a></li>
           </ul>
         </p>
       </article>
@@ -85,16 +96,16 @@
           </ul>
         </address>
         <blockquote class="company-description">
-          Les projets open source <a href="https://loopdocs.org">Loop</a>
-          et <a href="https://triodocs.org/">Trio</a> ont pour but
+          Les projets open source <a href="https://loopdocs.org" class="open-new-window">Loop</a>
+          et <a href="https://triodocs.org/" class="open-new-window">Trio</a> ont pour but
           de fournir une documentation et des ressources complètes pour les développeurs,
           les professionnels de santé et les utilisateurs de
           ces système automatisés d'administration d'insuline pour les personnes
           atteintes de Diabète de Type 1.
         </blockquote>
         <p>
-          Contributions aux projets <a href="https://github.com/LoopKit/loopdocs">Loop</a>
-          et <a href="https://github.com/nightscout/trio-docs">Trio</a> :
+          Contributions aux projets <a href="https://github.com/LoopKit/loopdocs" class="open-new-window">Loop</a>
+          et <a href="https://github.com/nightscout/trio-docs" class="open-new-window">Trio</a> sur GitHub :
           <ul>
             <li>amélioration de la documentation du produit en collaborant à distance
               avec une équipe géographiquement distribuée dans le monde entier,</li>
@@ -110,7 +121,7 @@
         <h3>Développeur Backend Rails</h3>
         <address>
           <ul class="company-details">
-            <li><span class="field-label">Entreprise</span> : <a href="https://www.hostnfly.com/">HostnFly</a> (Paris 🌐)</li>
+            <li><span class="field-label">Entreprise</span> : <a href="https://www.hostnfly.com/" class="open-new-window">HostnFly</a> (Paris 🌐)</li>
             <li><span class="field-label">Dates</span> : <time datetime="2022-04">Avril 2022</time> - <time datetime="2022-10">Octobre 2022</time></li>
           </ul>
         </address>
@@ -132,14 +143,14 @@
         <h3>Développeur Solidity</h3>
         <address>
           <ul class="company-details">
-            <li><span class="field-label">Entreprise</span> : <a href="https://www.alyra.fr/">Alyra</a> (Paris 🌐)</li>
+            <li><span class="field-label">Entreprise</span> : <a href="https://www.alyra.fr/" class="open-new-window">Alyra</a> (Paris 🌐)</li>
             <li><span class="field-label">Dates</span> : <time datetime="2021-01">Janvier 2021</time> - 
               <time datetime="2021-06">Juin 2021</time></li>
           </ul>
         </address>
         <blockquote class="company-description">
           Membre du projet open-source
-          <a href="https://github.com/bet-no-loss/bet-no-loss/#readme">BetNoLoss</a>
+          <a href="https://github.com/bet-no-loss/bet-no-loss/#readme" class="open-new-window">BetNoLoss</a>
           constitué de 5 personnes (2 chefs de projet et 3 développeurs).
         </blockquote>
         <p>
@@ -160,7 +171,7 @@
         <h3>Développeur Ruby on Rails et Java</h3>
         <address>
           <ul class="company-details">
-            <li><span class="field-label">Entreprise</span> : <a href="https://asklocala.com/">Locala</a> (Marseille)</li>
+            <li><span class="field-label">Entreprise</span> : <a href="https://asklocala.com/" class="open-new-window">Locala</a> (Marseille)</li>
             <li><span class="field-label">Dates</span> : <time datetime="2017-03">Mars 2017</time> -
               <time datetime="2020-10">Octobre 2020</time>
             </li>
@@ -228,7 +239,7 @@
         <p>
           Conception et réalisation d'une librairie de widgets qui s'intègrent dans une page Web
           pour interroger le moteur de recherche, filtrer et afficher les résultats.
-          Le produit phare d'Antidot, <a href="http://fluidtopics.com">Fluid Topics</a>,
+          Le produit phare d'Antidot, <a href="http://fluidtopics.com" class="open-new-window">Fluid Topics</a>,
           utilise à l'heure actuelle cette technologie.
         </p>
         <p class="skills">
@@ -386,7 +397,7 @@
         <h3>Développeur Web et Web mobile</h3>
         <ul class="company-details">
           <li><span class="field-label">Dates :</span> Juin 2025 - Septembre 2026 (16 mois)</li>
-          <li><span class="field-label">Organisme :</span> <a href="https://www.laplateforme.io/">La Plateforme</a></li>
+          <li><span class="field-label">Organisme :</span> <a href="https://www.laplateforme.io/" class="open-new-window">La Plateforme</a></li>
         </ul>
         <p>
           Formation en alternance menant au titre professionnel de Développeur Web et Web Mobile (RNCP niveau 5).
@@ -403,8 +414,7 @@
         <ul class="company-details">
           <li><span class="field-label">Dates :</span> <time datetime="2024-03">Mars 2024</time>
             - <time datetime="2024-06">Juin 2024</time></li>
-          <li><span class="field-label">Organisme :</span> <a href="https://www.m2iformation.fr/">M2i Formation &amp;
-              IA</a></li>
+          <li><span class="field-label">Organisme :</span> <a href="https://www.m2iformation.fr/" class="open-new-window">M2i Formation</a></li>
         </ul>
         <p>
           La formation de Développeur en Cybersécurité (POEC) chez M2i Formation
@@ -426,13 +436,13 @@
         <ul class="company-details">
           <li><span class="field-label">Dates :</span> <time datetime="2020-10">Octobre 2020</time>
             - <time datetime="2021-05">Mai 2021</time></li>
-          <li><span class="field-label">Organisme :</span> <a href="https://www.alyra.fr/">Alyra l'école Blockchain &amp; IA</a></li>
+          <li><span class="field-label">Organisme :</span> <a href="https://www.alyra.fr/" class="open-new-window">Alyra l'école Blockchain &amp; IA</a></li>
         </ul>
         <p>
           Développement d'applications distribuées sur la Blockchain Ethereum.
         </p>
         <p class="diploma">
-          <a class="field-label"
+          <a class="field-label open-new-window"
             href="https://certificate.bcdiploma.com/check/8AEFB8EA0140B750A45B5C30C13E2F320F2D746A07337296DAB5FF4D23789757ZmlaRlRBZHB6NTJtVEdObFQ1RUt4MEllUFJQRVRGYWxnZEx4Qjl6QmF1Y2Y0Wkll">Certification</a>
         </p>
         <p class="skills">
@@ -476,7 +486,7 @@
         <ul class="company-details">
           <li><span class="field-label">Dates :</span> <time datetime="1987">1987</time>
             - <time datetime="1989">1989</time></li>
-          <li><span class="field-label">Organisme :</span>IUT Aix Marseille</li>
+          <li><span class="field-label">Organisme :</span> IUT Aix Marseille</li>
         </ul>
         <p>
           Algorithmuie, Informatique, Langages de programmation (C, Pascal), Système d'exploitation Unix, Shell
@@ -492,7 +502,7 @@
       <h2>Langues</h2>
       <dl>
         <dt class="field-label">Anglais</dt>
-        <dd>Compétence professionnelle (C1)</dd>
+        <dd>Compétence professionnelle (<a href="https://cert.efset.org/4ybGYX" class="open-new-window">niveau C1</a>)</dd>
 
         <dt class="field-label">Français</dt>
         <dd>Langue Natale</dd>
