@@ -2,11 +2,40 @@
 
 /* ~~~~~ Color Theme */
 
-:root { /* :root <==> targets the html tag */
-  --cv-color-background: #4a6a89;
-  --cv-color-text: #eeeeee;
-}
+/* First attempt (for the record) */
+/* :root <==> html  */
+/*
+:root {
+  --cv-header-color-background: #4a6a89;
+  --cv-header-color-text: white;
+  --cv-header-color-heading:    var(--cv-header-color-text);
+  --cv-header-color-link:       #8ecaff;
+  --cv-header-color-link-hover: #cceafd;
 
+
+  --cv-main-color-background: white;
+  --cv-main-color-text: #5d5d5d;
+  --cv-main-color-heading: #e19153;
+  --cv-main-color-link:#b3565e;
+  --cv-header-color-link-hover: #cceafd;
+}
+*/
+
+:root { /* :root <==> html  */
+  --cv-header-color-background:       #4B286D; /* Deep eggplant violet */
+  --cv-header-color-text:             #F8F9FA; /* Off-white (very soft) */
+  --cv-header-color-heading:          #F8F9FA; /* Off-white  */
+
+  --cv-header-color-link:             #FFB800; /* Mango yellow to energize */
+  --cv-header-color-link-hover:       #FFD580; /* Pastel yellow */
+
+  --cv-main-color-background:         #F4F2F8;
+  --cv-main-color-text:               #44475A;
+  --cv-main-color-heading:            #4B286D;
+  --cv-main-color-heading-background: #C5ADC5; /* Pastel violet */
+  --cv-main-color-link:               #FF5841;
+  --cv-main-color-link-hover:         #4B286D;
+}
 
 /*
  *  The CV is laid out using Flexbox layout:
@@ -37,26 +66,99 @@
 
 /*
   ~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Header - Flex Container
+    HTML Elements
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-.cv-header-container {
-  display:        flex;
-  flex-wrap:      wrap;
+
+body {
+  color: var(--cv-main-color-text);
+  background-color: var(--cv-main-color-background);
 }
 
-/* ~~~~~ Header - Flex Items - "Name and Job Title" are aligned vertically */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--cv-main-color-heading);
+}
+
+a {
+  color: var(--cv-main-color-link);
+
+  &:hover {  /* Hovered links */
+      color: var(--cv-main-color-link-hover);
+    }
+}
+
+/*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+/* ~~~~~
+ *  Header - Flex Container
+ * ~~~~~
+ */
+
+.cv-header-container {
+  display:         flex;
+  flex-wrap:       wrap;
+  justify-content: space-around;
+  align-content:   center;
+
+  justify-items:   center;
+  align-items:     center;
+
+  background-color: var(--cv-header-color-background);
+  color:            var(--cv-header-color-text);
+
+  h1 {
+    color:            var(--cv-header-color-heading);
+  }
+
+  a {
+    /* Links descendants of an element with a class `cv-header-container` */
+    color: var(--cv-header-color-link);
+
+    &:hover {
+      /* Change the color of  these links when hovering the mouse over them */
+      color: var(--cv-header-color-link-hover);
+    }
+  }
+}
+
+/* ~~~~~
+* Header - Flex Items
+*/
+
+/* (Name and Job Title) takes at most 60%  */
 
 .cv-header-item-name {
   flex-grow:      6;
 }
+
+/* Contact Details take at most 40%  */
 
 .cv-header-item-contact {
   flex-grow:      4;
 }
 
 .cv-job-title {
+  font-weight: bold;
   text-align: center;
+}
+
+/* ~~~~~~
+ * Main - Flex Container
+ * ~~~~~~
+ */
+
+main {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+
+  h2 {
+    background-color: var(--cv-main-color-heading-background);
+  }
 }
 
 /* ~~~~~ TODO: */
