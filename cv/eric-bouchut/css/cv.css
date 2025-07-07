@@ -194,7 +194,25 @@ main {
 }
 
 
+/*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Media Queries
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
 
+@media screen and (max-width: 768px) {
+  /* When on a mobile (i.e., width <= 768px): */
 
+  main > section {
+    /* TODO: Use a class instead of a direct child selector */
+
+    /*
+     * Each Make each main's flex-item (`<section>`):
+     * 0:    cannot grow
+     * 1:    can shrink
+     * 100%: takes initially all the width available within its flex-container (`<main>`)
+     */
+    flex: 0 1 100%;
+  }
 
 }
