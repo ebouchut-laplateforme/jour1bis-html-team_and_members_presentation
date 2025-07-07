@@ -22,6 +22,8 @@
 */
 
 :root { /* :root <==> html  */
+
+  /* ~~~~~ Header - Color scheme */
   --cv-header-color-background:       #4B286D; /* Deep eggplant violet */
   --cv-header-color-text:             #F8F9FA; /* Off-white (very soft) */
   --cv-header-color-heading:          #F8F9FA; /* Off-white  */
@@ -29,6 +31,7 @@
   --cv-header-color-link:             #FFB800; /* Mango yellow to energize */
   --cv-header-color-link-hover:       #FFD580; /* Pastel yellow */
 
+  /* ~~~~~ Main - Color scheme */
   --cv-main-color-background:         #F4F2F8;
   --cv-main-color-text:               #44475A;
   --cv-main-color-heading:            #4B286D;
