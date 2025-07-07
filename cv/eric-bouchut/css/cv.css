@@ -93,6 +93,23 @@ a {
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
+.field-label {
+  font-weight: bold;
+}
+
+.company-description {
+  font-style: italic;
+}
+
+.company-details>li {
+  list-style-type: none;
+  /* Remove bullet points */
+}
+
+.diploma {
+  /* TODO: Add a diploma visual */
+}
+
 /* ~~~~~
  *  Header - Flex Container
  * ~~~~~
@@ -161,20 +178,8 @@ main {
   }
 }
 
-/* ~~~~~ TODO: */
 
-.field-label {
-  font-weight: bold;
-}
 
-.company-description {
-  font-style: italic;
-}
 
-.company-details > li {
-  list-style-type: none; /* Remove bullet points */
-}
 
-.diploma {
-  /* TODO: Add a diploma visual */
 }
