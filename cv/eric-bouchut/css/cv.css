@@ -38,6 +38,10 @@
   --cv-main-color-heading-background: #C5ADC5; /* Pastel violet */
   --cv-main-color-link:               #FF5841;
   --cv-main-color-link-hover:         #4B286D;
+
+  /* ~~~~~ Main - Other variables (gap...) */
+
+  --cv-main-flex-container-gap:        0.3em; /* gap in between main flex-items */
 }
 
 /*
@@ -166,18 +170,26 @@ a {
   text-align: center;
 }
 
+
 /* ~~~~~~
  * Main - Flex Container
  * ~~~~~~
  */
 
 main {
-  display: flex;
+  display:         flex;
   justify-content: left;
-  flex-wrap: wrap;
+  gap:             var(--cv-main-flex-container-gap);
+  flex-wrap:       wrap;
+
+  &>section {
+    /* main flex items initial size is (50% minus half the the gap in between items) */
+    flex: 0 1 calc(50% - var(--cv-main-flex-container-gap));
+  }
 
   h2 {
     background-color: var(--cv-main-color-heading-background);
+    padding: 0.2rem 0.3rem;
   }
 }
 
