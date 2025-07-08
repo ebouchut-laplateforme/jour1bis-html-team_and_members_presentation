@@ -1,0 +1,120 @@
+/* bbt.css:  Default CSS rules common to all pages of the slideshow */
+
+/* I try to separate concerns as much as possible and use:
+ *  - Element CSS selectors for visual styling
+ *  - Class CSS selectors for layout styling
+ */
+
+/*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Default Color Scheme for Slides
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+:root {
+  --team-background-color-body:    #8E8E8E;
+  --team-background-color-header:  #7D8F9B;
+  --team-background-color-main:    #414C7C;
+
+  --team-text-color-heading:       white;
+  --team-text-color-sub-heading:   #FAE182;
+}
+
+/*
+ * ~~~~~~~~~~~~~~~~~~~~~~
+ * Elements (HTML Tags)
+ * ~~~~~~~~~~~~~~~~~~~~~~
+ * Element selectors handle the visual styling.
+ */
+
+body {
+  margin:           0;
+  padding:          4em 2em;
+
+  background-color: var(--team-background-color-body);
+  font-family:      "Palanquin Dark", sans-serif;
+}
+
+header {
+  background-color: var(--team-background-color-header);
+}
+
+main {
+  background-color: var(--team-background-color-main);
+}
+
+h1 {
+  padding:     2rem;
+
+  color:       var(--team-text-color-heading);
+
+  font-weight: bold;
+  font-style:  normal;
+  font-size:   3rem;
+
+  text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+  padding:     2rem;
+  color:       var(--team-text-color-sub-heading);
+}
+
+/*
+ *  ~~~~~~~~~~~~~~~~
+ * CSS Classes
+ * ~~~~~~~~~~~~~~~~
+ * Class selectors handle the (flexbox) layout styling.
+ */
+
+.team-body-flex-container {
+  /* Flex container: body ↓ */
+  display:          flex;
+  flex-direction:   column;
+}
+
+.team-header-flex-item-container {
+  /*
+   * `body > header` is both:
+   *   - a flex item of the `body` flex container
+   *   - a flex container whose flex items (heading and hero image)  
+   *       are laid out horizontally
+   */
+
+   /* Flex item */
+  /* Take 60% of the available height in its container (`<body>) */
+  flex:             0 1 60%;
+
+  /* Flex container (horizontal layout): */
+  display:          flex;
+  justify-items:    space-evenly;
+  align-items:      center;
+}
+
+.team-header-flex-item-heading {
+  /* Flex item: body > header > h1 */
+  /* Cannot grow, can shrink, take 60% (initially) of the width available in its container (`<header>`) */
+  flex:             0 1 60%;
+  justify-self: center;
+}
+
+.team-header-flex-item-image {
+  /* Flex item: body > header > img */
+  /* Cannot grow, can shrink, initially take 40% of the available width */
+  flex:             0 1 40%;
+
+
+  /* Force the image to respect the flex basis */
+  width:            100%; /* Take full width of the flex item */
+  height:           auto; /* Maintain aspect ratio */
+  max-width:        100%; /* Prevent overflow */
+  min-width:        0;    /* ‼️ Allow the flex item to shrink below the image's width */
+
+  object-fit:       cover; /* Fill the flex item and maintain the aspect ratio */
+}
+
+.team-main-flex-item {
+  /* Flex item: body > main */
+  /* Cannot grow, can shrink, take 40% of the height available in its container (`body`) */
+  flex:             0 1 40%;
+}
